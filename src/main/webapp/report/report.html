@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>订单统计</title>
+<script src="${ctx}/report/js/fusioncharts.js"></script>
+<script src="${ctx}/report/js/themes/fusioncharts.theme.fint.js">
+</script>
+<script type="text/javascript">
+FusionCharts.ready(function(){
+  var customerChart = new FusionCharts({
+      "type": "column2d",
+      "renderAt": "containerCustomer",
+      "width": "100%",
+      "height": "300px",
+      "dataFormat": "json",
+      "dataSource":  {
+        "chart": {
+          "caption": "客户统计(汇总)",
+          "subCaption": "",
+          "xAxisName": "日期",
+          "yAxisName": "数量",
+          "theme": "fint"
+       	},
+       "data": ${customer}
+	    }
+	});
+  customerChart.render();
+	var orderChart = new FusionCharts({
+	    "type": "column2d",
+	    "renderAt": "containerOrder",
+	    "width": "100%",
+	    "height": "300px",
+	    "dataFormat": "json",
+	    "dataSource":  {
+	      "chart": {
+	        "caption": "订单统计(汇总)",
+	        "subCaption": "",
+	        "xAxisName": "日期",
+	        "yAxisName": "数量",
+	        "theme": "fint"
+	     },
+	     "data": ${order}
+	  }
+	});
+	orderChart.render();
+	var scoreChart = new FusionCharts({
+	    "type": "column2d",
+	    "renderAt": "containerScore",
+	    "width": "100%",
+	    "height": "300px",
+	    "dataFormat": "json",
+	    "dataSource":  {
+	      "chart": {
+	        "caption": "积分统计(汇总)",
+	        "subCaption": "",
+	        "xAxisName": "日期",
+	        "yAxisName": "数量",
+	        "theme": "fint"
+	     },
+	     "data": ${score}
+	  }
+	});
+	scoreChart.render();
+		var staffChart = new FusionCharts({
+		    "type": "column2d",
+		    "renderAt": "containerStaff",
+		    "width": "100%",
+		    "height": "300px",
+		    "dataFormat": "json",
+		    "dataSource":  {
+		      "chart": {
+		        "caption": "员工统计(汇总)",
+		        "subCaption": "",
+		        "xAxisName": "日期",
+		        "yAxisName": "数量",
+		        "theme": "fint"
+		     },
+		     "data": ${staff}
+		  }
+	});
+	staffChart.render();
+	var faultChart = new FusionCharts({
+	    "type": "column2d",
+	    "renderAt": "containerFault",
+	    "width": "100%",
+	    "height": "300px",
+	    "dataFormat": "json",
+	    "dataSource":  {
+	      "chart": {
+	        "caption": "故障统计(汇总)",
+	        "subCaption": "",
+	        "xAxisName": "日期",
+	        "yAxisName": "数量",
+	        "theme": "fint"
+	     },
+	     "data": ${fault}
+	  }
+	});
+	faultChart.render();
+	var menuChart = new FusionCharts({
+	    "type": "column2d",
+	    "renderAt": "containerMenu",
+	    "width": "100%",
+	    "height": "300px",
+	    "dataFormat": "json",
+	    "dataSource":  {
+	      "chart": {
+	        "caption": "菜单统计(汇总)",
+	        "subCaption": "",
+	        "xAxisName": "日期",
+	        "yAxisName": "数量",
+	        "theme": "fint"
+	     },
+	     "data": ${menu}
+	  }
+	});
+	menuChart.render();
+	var textChart = new FusionCharts({
+	    "type": "column2d",
+	    "renderAt": "containerText",
+	    "width": "100%",
+	    "height": "300px",
+	    "dataFormat": "json",
+	    "dataSource":  {
+	      "chart": {
+	        "caption": "消息统计(汇总)",
+	        "subCaption": "",
+	        "xAxisName": "日期",
+	        "yAxisName": "数量",
+	        "theme": "fint"
+	     },
+	     "data": ${text}
+	  }
+	});
+	textChart.render();
+})
+</script>
+</head>
+<body>
+  <div id="containerCustomer">客户</div>
+  <div id="containerOrder">订单</div>
+  <div id="containerFault">故障</div>
+  <div id="containerMenu">菜单</div>
+  <div id="containerText">消息</div>
+  <div id="containerScore">积分</div>
+  <div id="containerStaff">员工</div>
+</body>
+</html>

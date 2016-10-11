@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>认证</title>
+<link rel="stylesheet" href="${ctx}/css/amazeui.min.css"/>
+<link rel="stylesheet" href="${ctx}/css/main.css"/>
+</head>
+<body>
+<form class="am-form" id="form-with-tooltip" action="${ctx}/login" method="post">
+  <fieldset>
+  <div class="vipapply">
+	 <input type="hidden" name="token" id="token" value="${token!}"/>
+	 <div class="vip_text"><label>请输入口令</label><input type="text" minlength="2" placeholder="" required name="password"/></div>
+	    <button class="vip_btn"  type="submit" style="margin:10px;width:94%">确定</button>
+	</div>
+  </fieldset>
+</form>
+</body>
+</html>

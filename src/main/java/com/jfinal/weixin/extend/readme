@@ -1,0 +1,58 @@
+修改菜单,只需修改配置文件的appid,token,appsecrect;
+运行weixinconfig类;
+发送post请求:
+http://localhost/api/wechat/createMenu
+
+{
+    "button": [
+        {
+      "name": "项目详情",
+      "sub_button": [ {
+            "type": "view",
+            "name": "项目详情",
+            "url": "http://zz.house.qq.com/zt2016/jlty/index.htm?from=singlemessage&isappinstalled=0",
+            "sub_button": []
+        },
+       {
+            "type": "view",
+            "name": "益通置业",
+            "url": "http://zz.house.qq.com/zt2016/jlcwls/ytwls.htm",
+            "sub_button": []
+        }
+      ]
+    }, {
+            "type": "view",
+            "name": "微摄影大赛",
+            "url": "http://tp.newmediatool.com/index.php?g=Wap&m=Vote&a=index&token=Eioa5C5oj3S32qhH&id=22",
+            "sub_button": []
+        },
+        {
+      "name": "联系互动",
+      "sub_button": [ {
+            "type": "view",
+            "name": "明星顾问",
+            "url": "http://zz.house.qq.com/zt2015/jlcwls/zygw.htm",
+            "sub_button": []
+        },
+       {
+            "type": "view",
+            "name": "一键导航",
+            "url": "http://map.baidu.com/?newmap=1&s=inf%26uid%3D72f7ae90bd4dc885d22dd63a%26wd%3D%E4%B9%9D%E9%BE%99%E5%9B%BD%E9%99%85%E5%94%AE%E6%A5%BC%E9%83%A8%26all%3D1%26c%3D268&from=alamap&tpl=map_singlepoint",
+            "sub_button": []
+        }, {
+            "type": "view",
+            "name": "购房计算器",
+            "url": "http://zz.house.qq.com/zt2014/xbfdjsq/index.htm",
+            "sub_button": []
+        } , {
+            "type": "view",
+            "name": "全民经纪人",
+            "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd2fa880ffdb7f387&redirect_uri=http%3A%2F%2Fdayuweixin.com%2Findex.php%3Fg%3DWap%26m%3DMicroBroker%26a%3Dindex%26token%3Dnzpxvt1467615306%26bid%3D2&response_type=code&scope=snsapi_base&state=#wechat_redirect",
+            "sub_button": []
+        } 
+      ]
+    }
+       
+    ]
+}
+
